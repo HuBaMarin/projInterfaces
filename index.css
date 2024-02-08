@@ -1,0 +1,93 @@
+@font-face {
+    font-family: 'CircularStd-Book';
+    src: local('ProyectoInterfaces/CircularStd-Book.otf')
+}
+
+body{
+    font-family: 'CircularStd-Book', serif;
+}
+
+.indexMain {
+    background-color: #130303;
+    top: 10vh;
+    position: relative;
+}
+.indexNav {
+    width: 60vh;
+    font-size: 16px;
+    background-color: #2D080A;
+    text-align: center;
+    margin: 0 auto;
+
+    top: 5vh;
+    position: relative;
+}
+
+.indexNav>ul>li>a{
+    text-decoration: none;
+    color: #FFCDBC;
+    font-size: 20px;
+    transition: all 0.5s ease-in-out;
+    position: relative;
+    text-transform: uppercase;
+    font-family: 'CircularStd-Book', sans-serif;
+}
+.indexNav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.indexNav>ul>li>a:hover{
+    color: #ffffff;
+}
+
+.indexNav>ul>li{
+    display: inline-block;
+    margin: 0 10px;
+    text-align: center;
+}
+
+/*animation on hover from left to right, change color text to white*/
+.indexNav ul li a::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff;
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s ease-in-out;
+}
+.indexNav ul li a:hover::before{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+/*put svg inside the nav and make it visible*/
+
+div>svg{
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    position: absolute;
+    left: 0;
+    fill: #130303;
+    background-color: #FFCDBC;
+}
+
+footer{
+    color: #F5853F;
+    font-size: 10px;
+    text-align: center;
+}
+
+.seccionIndex{
+    color: #FFCDBC;
+    font-size: 30px;
+    text-align: justify;
+    word-break: break-word;
+}
