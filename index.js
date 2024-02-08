@@ -1,5 +1,4 @@
-/*create script to show current full date and full time*/
-
-const d = new Date();
-document.write(d.toLocaleDateString());
-document.write(d.toLocaleTimeString());
+setInterval(function() {
+    const d = new Date();
+    document.getElementById("fecha").innerHTML = d.toLocaleDateString()+"<br>"+d.toLocaleTimeString();
+}, 1000);
