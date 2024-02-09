@@ -1,10 +1,88 @@
-.iniciar{
+@font-face 
+{
+  font-family: "CircularStd-Book";
+  src: url("./CircularStd-Book.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+*{
+    font-family: "CircularStd-Book";
+}
+.iniciar {
     align-items: center;
     padding-bottom: 4vh;
 }
-form{
+
+form {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: white;
+    transition: background 0.5s ease-in-out;
+}
 
+form{
+    background: #2D080A;
+}
+form:hover {
+    background: #7C3626;
+}
+
+.iniciar>input {
+    width: 200px;
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    transition: background 0.5s ease-in-out;
+}
+
+.iniciar>input:hover {
+    background: rgb(255, 255, 255);
+}
+
+.iniciar>label {
+    color: white;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #FFCDBC;
+    font-weight: bolder;
+    text-align: center;
+    text-decoration: none;
+    background-size: 200% auto;
+    background-image: radial-gradient(circle, #7C3626, #7C3626);
+
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .25);
+    transition: background 0.5s;
+    animation: gradient 3s ease infinite;
+}
+
+.button:hover {
+    background-position: right center;
+
+}
+
+.tituloIniciarSesion{
+    text-align: center;
+    color: #FFCDBC;
 }

@@ -1,17 +1,24 @@
 @font-face {
-    font-family: 'CircularStd-Book';
-    src: local('ProyectoInterfaces/CircularStd-Book.otf')
+    font-family: "CircularStd-Book";
+    src: url("./CircularStd-Book.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
 }
-.fecha{
+
+* {
+    font-family: "CircularStd-Book";
+}
+
+html{
+    min-width: 100%;
+}
+
+.fecha {
     display: inline-block;
     color: #FFCDBC;
-    font-size: 20px;
-    font-family: 'CircularStd-Book', sans-serif;
+    font-size: 16px;
     text-align: left;
     width: 7vh;
-}
-body{
-    font-family: 'CircularStd-Book', serif;
 }
 
 .indexMain {
@@ -19,42 +26,43 @@ body{
     top: 10vh;
     position: relative;
 }
+
 .indexNav {
-    display: inline-block;
-    width: 86vh;
+    
     font-size: 16px;
     background-color: #2D080A;
     text-align: center;
     margin: 0 auto;
-    top: 5vh;
+    justify-content: center;
+    align-items: center;
     position: relative;
 }
 
-.indexNav>ul>li>a{
+.indexNav>ul>li>a {
     text-decoration: none;
     color: #FFCDBC;
     font-size: 20px;
     transition: all 0.5s ease-in-out;
     position: relative;
     text-transform: uppercase;
-    font-family: 'CircularStd-Book', sans-serif;
 }
-.indexNav ul{
+
+.indexNav ul {
     list-style: none;
     padding: 0;
 }
 
-.indexNav>ul>li>a:hover{
+.indexNav>ul>li>a:hover {
     color: #ffffff;
 }
 
-.indexNav>ul>li{
+.indexNav>ul>li {
     display: inline-block;
     margin: 0 10px;
     text-align: center;
 }
 
-.indexNav ul li a::before{
+.indexNav ul li a::before {
     content: "";
     position: absolute;
     width: 100%;
@@ -66,12 +74,13 @@ body{
     transform: scaleX(0);
     transition: transform .5s ease-in-out;
 }
-.indexNav ul li a:hover::before{
+
+.indexNav ul li a:hover::before {
     transform-origin: left;
     transform: scaleX(1);
 }
 
-div>svg{
+div>svg {
     background-repeat: no-repeat;
     background-size: cover;
     padding: 0;
@@ -83,15 +92,76 @@ div>svg{
     background-color: #FFCDBC;
 }
 
-footer{
-    color: #F5853F;
-    font-size: 10px;
-    text-align: center;
-}
 
-.seccionIndex{
+.seccionIndex {
     color: #FFCDBC;
     font-size: 30px;
     text-align: justify;
     word-break: break-word;
+}
+
+
+.seccionIndex h1 {
+    position: relative;
+    text-align: center;
+    height: 6vh;
+    width: 71vh;
+    top: 4vh;
+    left: 25vh;
+    font-size: 20px;
+}
+
+.seccionIndex article p {
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    position: relative;
+    font-size: 16px;
+}
+
+.seccionIndex>article {
+    justify-content: center;
+    top: 2vh;
+}
+
+#fecha.fecha {
+    display: flex;
+    justify-content: center;
+    width: 10vh;
+    margin: auto;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+}
+
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 20vh;
+}
+
+footer a {
+    margin: 1vh;
+    font-size: 14px;
+    text-decoration: none;
+    color: #F5853F;
+}
+
+
+.fade-in {
+    opacity: 1;
+}
+
+body {
+
+    min-height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    transition: opacity 0.5s;
 }

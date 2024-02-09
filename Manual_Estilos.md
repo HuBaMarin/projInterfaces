@@ -39,6 +39,11 @@
 
 ## Pie de página
 
-- **Información**: Dirección, contacto, redes sociales
-- **Color de fondo**: #2c3e50 (Azul oscuro)
-- **Color del texto**: #ecf0f1 (Gris claro)
+- **Información**: Términos y Condiciones, Política de privacidad, Cookies
+- **Color de fondo**: #130303 (Marrón Oscuro)
+
+## Fecha
+
+- **Información**: Muestra la fecha y hora local actual
+- **Color de fondo**: #130303 (Marrón Oscuro)
+- **Color del texto**: #FFCDBC (Marrón claro)

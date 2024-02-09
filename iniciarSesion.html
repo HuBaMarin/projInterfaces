@@ -1,34 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Iniciar Sesión</title>
-    <link rel="icon" href="./nuevo.svg">
-    <link rel="stylesheet" href="iniciarSesion.css">
-    <script src="iniciarSesion.js"></script>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <title>Iniciar Sesión</title>
+        <link rel="icon" href="./nuevo.svg">
+        <link rel="stylesheet" href="iniciarSesion.css">
+        <script src="iniciarSesion.js" defer></script>
+    </head>
+    <body>
 
-<main>
-    <h1>Iniciar Sesion</h1>
+        <main>
+            <h1 class="tituloIniciarSesion">Iniciar Sesion</h1>
 
-    <form name="iniciarSesion">
-        <div class="iniciar">
-            <label for="nombre">Usuario:</label>
-            <input type="text" id="nombre" name="nombre" required>
-        </div>
+            <form name="iniciarSesion">
+                <div class="iniciar">
+                    <label for="nombre">Usuario:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
 
-        <div class="iniciar">
-            <label for="password">Contraseña:</label>
-            <input type="password" id="password" name="password" required>
-        </div>
+                <div class="iniciar">
+                    <label for="password">Contraseña:</label>
+                    <input type="password" id="password" name="password"
+                        required>
+                </div>
 
-        <input type="submit" value="Iniciar Sesion" onclick="comprobarContrasenia(nombre.value, password.value)">
-    </form>
+                <input class="button" type="submit" value="Iniciar Sesion"
+                    onclick="comprobarContrasenia(nombre.value, password.value)">
+            </form>
 
-    <button onclick="redirigir()">Registrarse</button>
+            <button onclick="redirigir()">Registrarse</button>
 
-    <button> <a href="index.html">Índice</a></button>
-</main>
-</body>
+            <button> <a href="index.html">Índice</a></button>
+        </main>
+    </body>
 </html>

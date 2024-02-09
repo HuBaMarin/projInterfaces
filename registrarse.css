@@ -1,15 +1,123 @@
 /*crear estilos para el formulario de registro*/
-.registro {
-    max-width: 20vh;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+@font-face 
+{
+  font-family: "CircularStd-Book";
+  src: url("./CircularStd-Book.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+*{
+    font-family: "CircularStd-Book";
 }
 
-form{
+
+form {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: white;
+    transition: background 0.5s ease-in-out;
+}
+
+form{
+    background: #2D080A;
+}
+form:hover {
+    background: #7C3626;
+}
+
+
+.registroTitulo{
+    text-align: center;
+    color: #FFCDBC;
+}
+
+.registro{
+    text-align: justify;
+    
+}
+.registro>input {
+    width: 200px;
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    transition: background 0.5s ease-in-out;
+}
+
+.registro>input:hover {
+    background: rgb(255, 255, 255);
+}
+
+.registro>label {
+    color: white;
+}
+
+input#email{
+    position: relative;
+    left: 4.6vh;
+}
+input#password{
+    position: relative;
+    left: 2.5vh;
+}
+
+input#password_verify{
+    position: relative;
+    left: 0vh;
+}
+
+
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+input#reg {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #FFCDBC;
+    font-weight: bolder;
+    text-align: center;
+    text-decoration: none;
+    background-size: 200% auto;
+    background-image: radial-gradient(circle, #7C3626, #7C3626);
+
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .25);
+    transition: background 0.5s;
+    animation: gradient 3s ease infinite;
+}
+
+input#reg:hover {
+    background-position: right center;
+
+}
+
+#volver{
+    display: inline-block;
+    padding: 10px 20px;
+    color: #FFCDBC;
+    font-weight: bolder;
+    text-align: center;
+    text-decoration: none;
+    background-size: 200% auto;
+    background-image: radial-gradient(circle, #7C3626, #7C3626);
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .25);
+    transition: background 0.5s;
+    animation: gradient 3s ease infinite;
 }
