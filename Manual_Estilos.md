@@ -15,7 +15,7 @@
 - **Tamaño del texto principal**: 16px
 - **Tamaño del texto secundario**: 14px
 - **Títulos**: 20px
-- 
+
 ## Imágenes
 
 - **Formato**: .jpg o .png
@@ -45,5 +45,3 @@
 ## Fecha
 
 - **Información**: Muestra la fecha y hora local actual
-- **Color de fondo**: #130303 (Marrón Oscuro)
-- **Color del texto**: #FFCDBC (Marrón claro)

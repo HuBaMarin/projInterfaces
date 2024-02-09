@@ -6,31 +6,14 @@
 }
 
 * {
-    font-family: "CircularStd-Book";
+    font-family: "CircularStd-Book", sans-serif;
+
 }
 
-html{
-    min-width: 100%;
-}
-
-.fecha {
-    display: inline-block;
-    color: #FFCDBC;
-    font-size: 16px;
-    text-align: left;
-    width: 7vh;
-}
-
-.indexMain {
-    background-color: #130303;
-    top: 10vh;
-    position: relative;
-}
 
 .indexNav {
-    
+
     font-size: 16px;
-    background-color: #2D080A;
     text-align: center;
     margin: 0 auto;
     justify-content: center;
@@ -38,49 +21,45 @@ html{
     position: relative;
 }
 
-.indexNav>ul>li>a {
-    text-decoration: none;
-    color: #FFCDBC;
-    font-size: 20px;
-    transition: all 0.5s ease-in-out;
-    position: relative;
-    text-transform: uppercase;
-}
-
 .indexNav ul {
     list-style: none;
+    background-color: #7C3626;
     padding: 0;
+    height: 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    position: relative;
 }
 
-.indexNav>ul>li>a:hover {
-    color: #ffffff;
+.indexNav a{
+    text-decoration: none;
+    color: #FFCDBC;
+    padding: 20px;
+    display: block;
+    position: relative;
+
 }
 
-.indexNav>ul>li {
-    display: inline-block;
-    margin: 0 10px;
-    text-align: center;
-}
-
-.indexNav ul li a::before {
-    content: "";
+.indexNav a::after{
+    content: '';
     position: absolute;
     width: 100%;
+    transform: scaleX(0);
     height: 2px;
-    background-color: #ffffff;
     bottom: 0;
     left: 0;
-    transform-origin: right;
-    transform: scaleX(0);
-    transition: transform .5s ease-in-out;
+    background-color: #FFCDBC;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+.indexNav a:hover::after{
+   transform: scaleX(1);
+   transform-origin: left;
 }
 
-.indexNav ul li a:hover::before {
-    transform-origin: left;
-    transform: scaleX(1);
-}
-
-div>svg {
+div > svg {
     background-repeat: no-repeat;
     background-size: cover;
     padding: 0;
@@ -100,37 +79,41 @@ div>svg {
     word-break: break-word;
 }
 
-
-.seccionIndex h1 {
-    position: relative;
-    text-align: center;
-    height: 6vh;
-    width: 71vh;
-    top: 4vh;
-    left: 25vh;
-    font-size: 20px;
+.seccionIndex * {
+    background-color: #7C3626;
 }
 
-.seccionIndex article p {
+article p {
+    text-align: justify;
+    text-indent: 2em;
+    line-height: 1.5;
+    font-size: 16px;
+    width: 50vh;
+}
+
+article h1 {
+    text-align: center;
+}
+
+article {
     display: flex;
     align-items: center;
-    text-align: justify;
-    position: relative;
-    font-size: 16px;
-}
-
-.seccionIndex>article {
     justify-content: center;
-    top: 2vh;
+    flex-direction: column;
+    width: 55vh;
+    margin: auto;
 }
 
-#fecha.fecha {
+#fecha {
     display: flex;
     justify-content: center;
     width: 10vh;
     margin: auto;
     padding-top: 3vh;
     padding-bottom: 3vh;
+    font-size: 16px;
+    color: #FFCDBC;
+    background-color: #7C3626;
 }
 
 
@@ -139,7 +122,13 @@ footer {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: 20vh;
+    height: 10vh;
+    background-color: #7C3626;
+    width: 23vh;
+    top: 4vh;
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
 }
 
 footer a {
@@ -147,6 +136,12 @@ footer a {
     font-size: 14px;
     text-decoration: none;
     color: #F5853F;
+    transition: all 0.5s ease-in-out;
+    background-color: #7C3626;
+}
+
+footer a:hover {
+    color: #FFCDBC;
 }
 
 
@@ -161,7 +156,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-
     opacity: 0;
     transition: opacity 0.5s;
 }

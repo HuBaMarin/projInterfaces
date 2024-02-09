@@ -26,54 +26,51 @@
 
 
 .indexNav {
-    display: inline-block;
-    width: 86vh;
+
     font-size: 16px;
-    background-color: #2D080A;
     text-align: center;
     margin: 0 auto;
-    top: 5vh;
+    justify-content: center;
+    align-items: center;
     position: relative;
 }
 
-.indexNav>ul>li>a{
+.indexNav ul {
+    list-style: none;
+    background-color: #7C3626;
+    padding: 0;
+    height: 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+.indexNav a{
     text-decoration: none;
     color: #FFCDBC;
-    font-size: 20px;
-    transition: all 0.5s ease-in-out;
+    padding: 20px;
+    display: block;
     position: relative;
-    text-transform: uppercase;
-}
-.indexNav ul{
-    list-style: none;
-    padding: 0;
+
 }
 
-.indexNav>ul>li>a:hover{
-    color: #ffffff;
-}
-
-.indexNav>ul>li{
-    display: inline-block;
-    margin: 0 10px;
-    text-align: center;
-}
-
-.indexNav ul li a::before{
-    content: "";
+.indexNav a::after{
+    content: '';
     position: absolute;
     width: 100%;
+    transform: scaleX(0);
     height: 2px;
-    background-color: #ffffff;
     bottom: 0;
     left: 0;
-    transform-origin: right;
-    transform: scaleX(0);
-    transition: transform .5s ease-in-out;
+    background-color: #FFCDBC;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
 }
-.indexNav ul li a:hover::before{
-    transform-origin: left;
+.indexNav a:hover::after{
     transform: scaleX(1);
+    transform-origin: left;
 }
 
 .contenedorblog1 {

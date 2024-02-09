@@ -12,31 +12,34 @@
         <main>
             <h1 class="registroTitulo">Registrarse</h1>
 
-            <form name="Registrarse">
+            <form id="Registrarse">
                 <div class="registro">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" required>
+                    <label for="correo">Email</label>
+                    <input type="email" id="correo" required>
                 </div>
                 <br>
                 <div class="registro">
-                    <label for="username">Nombre de usuario</label>
-                    <input type="text" id="username" required>
-                </div>
-                <br>
-
-                <div class="registro">
-                    <label for="password">Contraseña</label>
-                    <input type="password" id="password" required>
+                    <label for="nombre">Nombre de usuario</label>
+                    <input type="text" id="nombre" required>
+                    <p id="error1"></p>
                 </div>
                 <br>
 
                 <div class="registro">
-                    <label id="verificar_pass" for="password_verify">Verificar contraseña</label>
-                    <input type="password" id="password_verify">
+                    <label for="contrasenia">Contraseña</label>
+                    <input type="password" id="contrasenia" required>
+                    <p id="error2"></p>
+                </div>
+                <br>
+
+                <div class="registro">
+                    <label id="verificar_pass" for="verificar_password">Verificar contraseña</label>
+                    <input type="password" id="verificar_password" required>
+                    <p id="error3"></p>
                 </div>
                 <br>
                 <input id="reg" type="submit" value="Registrarse"
-                    onclick="save(); validatePassword()">
+                    onclick="save()">
             </form>
             <br>
             <a id="volver" href="index.html">Volver</a>

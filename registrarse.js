@@ -1,24 +1,41 @@
-function validatePassword() {
-    const password = document.getElementById('password').value;
-    const password_verify = document.getElementById('password_verify').value;
-    if (password !== password_verify) {
-        alert('Las contraseñas no coinciden');
-    }
-}
 function save() {
-    const email = document.getElementById('email').value;
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
-    const password_verify = document.getElementById('password_verify').value;
+    const email = document.getElementById('correo').value;
+    const username = document.getElementById('nombre').value;
+    const password = document.getElementById('contrasenia').value;
+    const verificar_password = document.getElementById('verificar_password').value;
 
-    const user = {
-        email: email,
-        username: username,
+
+
+    let id = Math.random().toString(36).substring(2, 15);
+
+
+    const usuario = {
+        correo: email,
+        nombre: username,
         password: password,
-        password_verify: password_verify
+        verificar_password: verificar_password
     };
 
-    localStorage.setItem('user', JSON.stringify(user));
-    alert('Se ha registrado exitosamente');
-    window.location = 'index.html';
+
+
+    document.getElementById('Registrarse').addEventListener('submit', (e) => {
+        e.preventDefault();
+        if (!/^(?=[a-zA-Z0-9]+$)[a-zA-Z0-9]+$/.test(usuario.nombre)) {
+            document.getElementById('error1').innerHTML = "El nombre solo puede contener letras y números";
+        }else if (!/^(?=.*[a-zA-Z\d!#()%?])[a-zA-Z0-9!#()%?]{8,20}$/.test(usuario.password)) {
+            document.getElementById('error2').innerHTML = "La contraseña debe tener al menos 8 caracteres, una letra mayúscula, un número y un caracter especial de aquí !#()%? ";
+        }
+        else if (usuario.password !== usuario.verificar_password) {
+            document.getElementById('error3').innerHTML = "Las contraseñas no coinciden";
+        } else {
+            localStorage.setItem(id, JSON.stringify(usuario));
+            alert("Usuario registrado exitosamente");
+            window.location.href = 'index.html';
+
+        }
+    });
+
+
+
 }
+
