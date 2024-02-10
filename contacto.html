@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Contact Page with Dark Radial Gradient</title>
+        <title>Contacto</title>
         <link rel="stylesheet" href="contacto.css">
     </head>
     <body>
@@ -25,4 +25,44 @@
         <script
             src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     </body>
+</html>-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="contacto.css">
+</head>
+<body>
+
+<nav class="indexNav">
+    <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="about.html">Conócenos</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="iniciarSesion.html">Iniciar Sesión</a></li>
+        <li><a href="registrarse.html">Registrarse</a></li>
+    </ul>
+</nav>
+
+<form>
+
+    <label for="nombre">Nombre:</label><br>
+    <input type="text" id="nombre" name="name"><br>
+    <label for="correo">Correo Electrónico:</label><br>
+    <input type="email" id="correo" name="correo"><br>
+    <label for="mensaje">Mensaje:</label><br>
+    <textarea id="mensaje" name="mensaje"></textarea><br>
+    <button type="submit">Enviar</button>
+
+    <a id="transicionAlIndex" href="index.html">Volver</a>
+</form>
+<script src="contacto.js" defer></script>
+
+<script
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</body>
 </html>

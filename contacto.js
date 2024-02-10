@@ -7,9 +7,9 @@ $(document).ready(function () {
     }, {});
 
 
-    var timestamp = new Date().getTime();
-    var localStorageKey = 'contacto_' + timestamp;
-
+    let timestamp = new Date().toLocaleDateString();
+    let hora = new Date().toLocaleTimeString();
+    let localStorageKey = '//fecha' + timestamp+"//hora"+hora;
 
     localStorage.setItem(localStorageKey, JSON.stringify(formData));
   });
@@ -23,6 +23,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     setTimeout(function () {
       window.location.href = link.href;
-    }, 500);
+    }, 50);
   });
 });

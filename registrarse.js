@@ -29,7 +29,7 @@ function save() {
             document.getElementById('error3').innerHTML = "Las contraseñas no coinciden";
         } else {
             localStorage.setItem(id, JSON.stringify(usuario));
-            alert("Usuario registrado exitosamente");
+            alert("Usuario registrado exitosamente!");
             window.location.href = 'index.html';
 
         }

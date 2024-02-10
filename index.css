@@ -10,6 +10,9 @@
 
 }
 
+body{
+    background-color: #130303;
+}
 
 .indexNav {
 
@@ -107,7 +110,7 @@ article {
 #fecha {
     display: flex;
     justify-content: center;
-    width: 10vh;
+    width: 15vh;
     margin: auto;
     padding-top: 3vh;
     padding-bottom: 3vh;
@@ -122,9 +125,9 @@ footer {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: 10vh;
     background-color: #7C3626;
-    width: 23vh;
+    width: 32vh;
+    height: auto;
     top: 4vh;
     left: 50%;
     transform: translateX(-50%);
@@ -137,7 +140,7 @@ footer a {
     text-decoration: none;
     color: #F5853F;
     transition: all 0.5s ease-in-out;
-    background-color: #7C3626;
+
 }
 
 footer a:hover {
