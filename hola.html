@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {background-color: #ddd;}
+
+        .dropdown:hover .dropdown-content {display: block;}
+    </style>
+</head>
+<body>
+
+<div class="dropdown">
+    <img src="bruhhh.jpg" alt="Menu" width="50" height="50">
+    <div class="dropdown-content">
+        <a href="#" id="logout">Logout</a>
+        <a href="#" id="login">Login</a>
+        <a href="#" id="register">Register</a>
+    </div>
+</div>
+
+<script>
+    document.getElementById('logout').addEventListener('click', function() {
+        // Add your logout function here
+        document.getElementById('login').style.display = 'block';
+        document.getElementById('register').style.display = 'block';
+        this.style.display = 'none';
+    });
+
+    document.getElementById('login').addEventListener('click', function() {
+        // Add your login function here
+        document.getElementById('logout').style.display = 'block';
+        this.style.display = 'none';
+        document.getElementById('register').style.display = 'none';
+    });
+
+    document.getElementById('register').addEventListener('click', function() {
+        // Add your register function here
+        document.getElementById('logout').style.display = 'block';
+        this.style.display = 'none';
+        document.getElementById('login').style.display = 'none';
+    });
+</script>
+
+</body>
+</html>

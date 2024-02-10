@@ -1,62 +1,184 @@
+@font-face {
+    font-family: "CircularStd-Book";
+    src: url("./CircularStd-Book.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
 
+* {
+    font-family: "CircularStd-Book", sans-serif;
+
+}
 
 
 body {
-  margin:  0;
-  height:  100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: radial-gradient(circle, #130303, #7C3626);
-  animation: bgAnimate  5s infinite alternate;
+    display: flow;
+    vertical-align: middle;
+    text-align: center;
+    background: radial-gradient(circle, #130303, #7C3626);
+    animation: bgAnimate 5s infinite alternate;
 }
+
 @keyframes bgAnimate {
-  0% { background-position:  0%  50%; }
-  50% { background-position:  100%  50%; }
-  100% { background-position:  0%  50%; }
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 /*botón*/
 
 form button {
-  border: none;
-  border-radius:  5px;
-  padding:  10px;
-  margin-bottom:  20px;
-  outline: none;
-  transition: border  0.5s ease;
-  font-weight: bold;
-  background-color: #130303;
-  color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+    outline: none;
+    transition: border 0.5s ease;
+    font-weight: bold;
+    background-color: #130303;
+    color: white;
 }
 
 button:hover {
-  border:  2px solid transparent;
-  background-clip: padding-box;
-  box-decoration-break: clone;
-  animation: borderAnimate  1s infinite alternate;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    box-decoration-break: clone;
+    animation: borderAnimate 1s infinite alternate;
 }
 
 @keyframes borderAnimate {
-  0% { border-image-source: linear-gradient(90deg, #7C3626, #130303); }
-  50% { border-image-source: linear-gradient(180deg, #7C3626, #130303); }
-  100% { border-image-source: linear-gradient(270deg, #7C3626, #130303); }
+    0% {
+        border-image-source: linear-gradient(90deg, #7C3626, #130303);
+    }
+    50% {
+        border-image-source: linear-gradient(180deg, #7C3626, #130303);
+    }
+    100% {
+        border-image-source: linear-gradient(270deg, #7C3626, #130303);
+    }
 }
-
 
 
 /*form*/
 
 form {
-  display: flex;
-  flex-direction: column;
-  max-width:  400px;
-  padding:  20px;
-  background:  #7C3626;
-  border-radius:  10px;
-  box-shadow:  0  10px  20px #130303;
+    display: flex;
+    flex-direction: column;
+    max-width: 30%;
+    padding: 20px;
+    left: 50%;
+    transform: translateX(+100%);
+    background: #7C3626;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px #130303;
+    justify-content: center;
+    align-items: center;
 }
 
 .fade-out {
-  opacity: 0;
+    opacity: 0;
+}
+
+/*barra navegación*/
+nav {
+    display: flex;
+    font-size: 16px;
+    text-align: center;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: auto;
+    height: 20vh;
+    top: 0;
+}
+
+nav ul {
+    list-style: none;
+    background-color: #7C3626;
+    padding: 0;
+    height: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    border-radius: 45px;
+
+}
+
+nav a {
+    text-decoration: none;
+    color: #FFCDBC;
+    padding: 20px;
+    display: block;
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #FFCDBC;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+nav a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/*volver*/
+
+.volver {
+    position: relative;
+    padding: 10px 24px;
+    font-size: 18px;
+    color: #FFCDBC;
+    border: 2px solid #2D080A;
+    border-radius: 34px;
+    background-color: transparent;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.volver::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    border-radius: inherit;
+    scale: 0;
+    z-index: -1;
+    background-color: #130303;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.volver:hover::before {
+    scale: 3;
+}
+
+.volver:hover {
+    color: #FFCDBC;
+    scale: 1.1;
+    box-shadow: 0 0 20px #130303;
+}
+
+.volver:active {
+    scale: 1;
 }

@@ -5,9 +5,10 @@
     <title>Tienda de Bicicletas</title>
     <link rel="stylesheet" href="index.css">
     <link rel="icon" href="./nuevo.svg">
-    <script src="index.js"></script>
+    <script src="index.js" defer></script>
 </head>
-<body>
+<body onload="updateUI()">
+<!--onload="updateUI()"-->
 
 <main>
     <section id="fecha"></section>
@@ -27,8 +28,8 @@
     <section class="seccionIndex">
         <article>
 
-            <h1>¡Bienvenido a la Tienda de Bicicletas! 🚴‍♂️🚴‍♀️</h1>
-
+            <h1>¡Bienvenido/a a la Tienda de Bicicletas! 🚴‍♂️🚴‍</h1>
+            <div id="textoNombre"></div>
             <p>Aquí encontrarás una amplia gama de bicicletas de alta
                 calidad para todos los gustos y necesidades.
                 Ya sea que busques una bicicleta de montaña resistente,
@@ -51,6 +52,6 @@
     </footer>
 </main>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </body>
 </html>

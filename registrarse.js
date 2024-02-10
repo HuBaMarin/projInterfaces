@@ -5,17 +5,13 @@ function save() {
     const verificar_password = document.getElementById('verificar_password').value;
 
 
-
-    let id = Math.random().toString(36).substring(2, 15);
-
-
     const usuario = {
+        id: 0,
         correo: email,
         nombre: username,
         password: password,
         verificar_password: verificar_password
     };
-
 
 
     document.getElementById('Registrarse').addEventListener('submit', (e) => {
@@ -28,10 +24,10 @@ function save() {
         else if (usuario.password !== usuario.verificar_password) {
             document.getElementById('error3').innerHTML = "Las contraseñas no coinciden";
         } else {
-            localStorage.setItem(id, JSON.stringify(usuario));
+            usuario.id++;
+            localStorage.setItem("usuario", JSON.stringify(usuario));
             alert("Usuario registrado exitosamente!");
             window.location.href = 'index.html';
-
         }
     });
 

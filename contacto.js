@@ -26,3 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }, 50);
   });
 });
+
+$('nav a').click(function() {
+  $(this).animate({backgroundColor: '#ffffff'},  500);
+});
