@@ -44,6 +44,11 @@ body {
 .textos{
     background-color: #7C3626;
 }
+
+.texto>*{
+    color: #FFCDBC;
+
+}
 /* Footer */
 footer {
     position: relative;

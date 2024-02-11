@@ -6,30 +6,31 @@
     <link rel="icon" href="./nuevo.svg">
     <link rel="stylesheet" href="iniciarSesion.css">
     <script src="iniciarSesion.js" defer></script>
+
 </head>
 <body>
 
 <main>
 
-    <form name="iniciarSesion">
+    <form id="iniciarSesion">
         <h1 class="tituloIniciarSesion">Iniciar Sesion</h1>
         <div class="iniciar">
             <label for="nombre">Usuario:</label>
             <input type="text" id="nombre" name="nombre" required>
+            <p class="error1"></p>
         </div>
 
         <div class="iniciar">
             <label for="password">Contraseña:</label>
             <input type="password" id="password" name="password"
                    required>
+            <p class="error2"></p>
         </div>
 
-        <div>
-            <input class="button" type="submit" value="Confirmar"
-                   onclick="comprobarContrasenia(nombre.value, password.value)">
 
-            <button class="volver"><a href="index.html">Índice</a></button>
-        </div>
+            <input type="submit" value="Iniciar Sesion"
+                   onclick="comprobarContrasenia()">
+
 
     </form>
 

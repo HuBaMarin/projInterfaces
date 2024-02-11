@@ -120,5 +120,11 @@ form {
     color: #FFCDBC;
 }
 
-
-/*align button and id volver direction column*/
+.error1{
+    color: #FFCDBC;
+    text-align: center;
+}
+.error2{
+    color: #FFCDBC;
+    text-align: center;
+}
