@@ -1,7 +1,8 @@
 /*comprobar la contraseña y el usuario al iniciar sesion*/
 function comprobarContrasenia() {
     const users = JSON.parse(localStorage.getItem('usuario'));
-
+    //para saber si ya he visitado la pagina
+    localStorage.setItem('visitadoLogin', 'true');
     document.getElementById("iniciarSesion").addEventListener("submit", (e) => {
         e.preventDefault();
         const nom = document.querySelector("#nombre").value;

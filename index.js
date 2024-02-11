@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 function comprobarUsuario() {
-    return !!JSON.parse(localStorage.getItem('usuario')).id;
+    return localStorage.getItem('visitadoLogin');
 }
 
 function updateUI() {
@@ -19,55 +19,48 @@ function updateUI() {
     if (comprobarUsuario()) {
 
         //si vengo de la página de iniciarSesion, esconder el boton de iniciarSesion
-        if (window.location.href.includes('iniciarSesion.html')) {
 
-            //recoger login de localStorage y esconder los elementos register y login
-            let nombre = JSON.parse(localStorage.getItem('usuario')).nombre;
-            const loginButton = document.querySelector('a[href="iniciarSesion.html"]');
-            const registerButton = document.querySelector('a[href="registrarse.html"]');
 
-            loginButton.style.display = 'none';
-            registerButton.style.display = 'none';
+        //recoger login de localStorage y esconder los elementos register y login
+        let nombre = JSON.parse(localStorage.getItem('usuario')).nombre;
+        const loginButton = document.querySelector('a[href="iniciarSesion.html"]');
+        const registerButton = document.querySelector('a[href="registrarse.html"]');
 
-            //recoger un texto de index y poner el nombre
-            let texto = document.querySelector("h1");
+        loginButton.style.display = 'none';
+        registerButton.style.display = 'none';
 
-            texto.textContent = "¡Bienvenido/a a la Tienda de Bicicletas " + nombre + " ! 🚴‍♂️🚴‍♀️";
-            // mostrar una imagen y poner la funcion de cerrar sesión debajo
+        //recoger un texto de index y poner el nombre
+        let texto = document.querySelector("h1");
 
-            //recoger un elemento del index del nav y poner la imagen
-            let ponerImagen =
-                `<div>
-                  <img src="bruhhh.jpg" class="dropbtn"  alt="imagen"/>
+        texto.textContent = "¡Bienvenido/a a la Tienda de Bicicletas " + nombre + " ! 🚴‍♂️🚴‍♀️";
+        // mostrar una imagen y poner la funcion de cerrar sesión debajo
+
+        //recoger un elemento del index del nav y poner la imagen
+        let ponerImagen =
+            `<div>
+                  <img src="imagen_usuario.jpg" class="dropbtn"  alt="imagen"/>
                   <li id="desplegable">
                     <a href="#">Cerrar Sesión</a>
                   </li>
                 </div>`;
 
+        let nav = document.querySelector(".indexNav");
 
-            let desplegable = document.getElementById("desplegable");
-            desplegable.style.display = "block";
+        nav.innerHTML += ponerImagen;
 
-
-            desplegable.addEventListener("click", function () {
-                desplegable.style.display = "none";
-                loginButton.style.display = 'block';
-                registerButton.style.display = 'block';
-                localStorage.removeItem('usuario');
-                location.reload();
-            });
+        let desplegable = document.getElementById("desplegable");
+        desplegable.style.display = "block";
 
 
+        //cerrar sesion
+        desplegable.addEventListener("click", function () {
+            desplegable.style.display = "none";
+            loginButton.style.display = 'block';
+            registerButton.style.display = 'block';
+            localStorage.removeItem('visitadoLogin');
+            location.reload();
+        });
 
-            let nav = document.querySelector(".indexNav");
-
-            nav.innerHTML += ponerImagen;
-        }
-
-        //si vengo de la pagina de registrarse, esconder el boton de registrarse
-        if (window.location.href.includes('registrarse.html')) {
-            registerButton.style.display = 'none';
-        }
 
     }
 }
